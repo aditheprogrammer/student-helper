@@ -97,7 +97,7 @@ Answer: B
     # --- Display Question ---
     idx = st.session_state.current_question
     qdata = st.session_state.questions[idx]
-    st.markdown(f"<div class='question-box'>Q{idx+1}: {qdata['question']}</div>", unsafe_allow_html=True)
+    st.markdown(f"<div class='question-box'> {qdata['question']}</div>", unsafe_allow_html=True)
 
     option_keys = list(qdata['options'].keys())
     option_classes = [f"option{i}" for i in range(len(option_keys))]

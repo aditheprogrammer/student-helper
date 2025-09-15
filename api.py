@@ -2,6 +2,7 @@ import streamlit as st
 from langchain_ollama import OllamaLLM
 from learn import learn_section
 from quiz import quiz_section
+from notes import notes_section
 
 # Load model
 @st.cache_resource
@@ -187,7 +188,7 @@ body, .stApp, .block-container {
 
 # Sidebar Navigation
 st.sidebar.title("Options")
-page = st.sidebar.radio("Choose", ["Learn", "Quiz"])
+page = st.sidebar.radio("Choose", ["Learn", "Quiz", "Notes"])
 
 # Pages
 if page == "Learn":
@@ -197,4 +198,6 @@ if page == "Learn":
 elif page == "Quiz":
     st.markdown("<h1 style='text-align:center;color:#FFD700;'>Quiz 🥭</h1>", unsafe_allow_html=True)
     quiz_section(model)
-
+elif page == "Notes":
+    st.markdown("<h1 style='text-align:center;color:#FFD700;'>Notes 🥭</h1>", unsafe_allow_html=True)
+    notes_section(model)
