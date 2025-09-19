@@ -1,0 +1,13 @@
+Steps:
+  1. Install llama3 from ollama and run ollama,
+  2. run in terminal: 
+          ollama createm mango -f ModelLangChain.txt
+  3. run in terminal:
+          ollama run mango
+  4. run in terminal:
+          pip install -r requirements.txt
+  5. run in terminal:
+          streamlit run api.py
+
+
+
